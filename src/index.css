@@ -1,0 +1,152 @@
+@keyframes move-round {
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+body {
+  height: 500vw;
+  background-color: khaki;
+}
+
+#videobcg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+.background {
+  position: fixed;
+  width: 100%; /* 857px */
+  height: 100%; /* 789px */
+  left: 0%;
+  top: 0%;
+  perspective: 1000px;
+}
+
+.stage {
+  transform-style: preserve-3d;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+.scrolldownicon {
+  position: absolute;
+  right: 5%;
+  bottom: 45%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../statics/scroll.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+  animation: move-round 1s infinite alternate;
+}
+
+.wall_container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  transform: translateZ(-550vw);
+  transform-style: preserve-3d;
+}
+
+.wall {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  font-size: 5rem;
+  background: rgba(255, 255, 255, 0.8);
+  transform-style: preserve-3d;
+}
+
+.wall_context {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.wall_left {
+  width: 1200vw;
+
+  transform: rotateY(90deg) translateZ(-600vw);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.wall_right {
+  width: 1200vw;
+
+  transform: rotateY(90deg) translateZ(-500vw);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.wall:nth-child(3) {
+  transform: translateZ(300vw);
+}
+.wall:nth-child(4) {
+  transform: translateZ(0vw);
+}
+.wall:nth-child(5) {
+  transform: translateZ(-200vw);
+}
+.wall:nth-child(6) {
+  transform: translateZ(-600vw);
+}
+
+.door_container {
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+  border-radius: 0px 5px;
+  transform-style: preserve-3d;
+}
+
+.doorface.front.door {
+  position: absolute;
+  background-color: #f5e25f;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.doorhandle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  right: 18%;
+  background-color: brown;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* .doorface.back.door {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f5e25f;
+} */
+
+.dooropen {
+  transform: rotateY(-110deg);
+  transform-origin: left;
+}

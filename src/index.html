@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="background">
+        <video
+          id="videobcg"
+          preload="auto"
+          autoplay="true"
+          loop="loop"
+          muted="muted"
+          volume="0"
+        >
+          <source src="../statics/aquarium3.mp4" type="video/mp4" />
+          Sorry, your browser does not support HTML5 video.
+        </video>
+
+        <div class="stage">
+          <div class="scrolldownicon"></div>
+          <div class="wall_container">
+            <div class="wall wall_left"></div>
+            <div class="wall wall_right"></div>
+
+            <div class="wall wall_door wall_1">
+              <div class="wall_context">Hello</div>
+            </div>
+            <div class="wall wall_door wall_2">
+              <div class="wall_context">second</div>
+            </div>
+            <div class="wall wall_door wall_3">
+              <div class="wall_context">third</div>
+            </div>
+            <div class="wall wall_door wall_4">
+              <div class="wall_context">
+                <div class="door_container">
+                  <div class="doorface front door">
+                    <div class="doorface front doorhandle"></div>
+                  </div>
+                  <div class="doorface back door"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./Character"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
